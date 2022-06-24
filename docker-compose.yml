@@ -1,0 +1,33 @@
+version: "3"
+
+services:
+  server:
+    build:
+      context: ./server
+    image: backend
+    container_name: node-express-server
+    restart: always
+    ports:
+      - 5000:5000
+    networks:
+      - app-network
+
+  client:
+    build:
+      context: ./client
+    image: frontend
+    container_name: react-app-client
+    restart: always
+    ports:
+      - 80:80
+    environment:
+      - REACT_APP_API_HOST=localhost
+      - REACT_APP_API_PORT:5000
+    depends_on:
+      - server
+    networks:
+      - app-network
+
+networks:
+  app-network:
+      driver: bridge

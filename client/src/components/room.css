@@ -1,0 +1,23 @@
+#calculate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2ch;
+  margin-bottom: 3ch;
+}
+
+#calculateBtn {
+  font-size: large;
+  width: 8em;
+}
+
+#divResult {  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h4 {
+  margin-top: 1.5ch;
+  margin-bottom: 1ch;
+}

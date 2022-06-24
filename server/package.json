@@ -1,0 +1,29 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "./src/api/server.js",
+  "scripts": {
+    "start": "node .",
+    "dev": "nodemon .",
+    "dev:test": "mocha ./src/tests/**/*$NAME*.test.js --exit",
+    "dev:test:coverage": "nyc --all npm run dev:test"
+  },
+  "author": "Daniel Teixeira",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "chai-http": "^4.3.0",
+    "eslint": "^8.14.0",
+    "mocha": "^9.2.2",
+    "nodemon": "^2.0.16",
+    "nyc": "^15.1.0",
+    "sinon": "^13.0.2"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "eslint-config-trybe-backend": "^1.0.4",
+    "express": "^4.18.1"
+  },
+  "keywords": [],
+  "description": ""
+}
